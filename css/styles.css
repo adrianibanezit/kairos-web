@@ -74,8 +74,9 @@ header {
 
 .logo-img {
     display: block;
-    width: 108px;
-    height: 36px;
+    width: 135px;
+    height: 45px;
+    flex-shrink: 0;
 }
 
 .logo-img img {
@@ -83,6 +84,7 @@ header {
     height: 100%;
     object-fit: contain;
     object-position: left center;
+    display: block;
 }
 
 .nav {
@@ -742,8 +744,11 @@ footer {
 }
 
 .footer-logo {
-    width: 100px;
+    width: 150px;
+    height: 50px;
     margin: 0 auto;
+    object-fit: contain;
+    display: block;
 }
 
 .footer-social {
@@ -791,9 +796,9 @@ footer {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .i1, .i2, .i3, .i4 { 
-        grid-column: span 1; 
+
+    .i1, .i2, .i3, .i4 {
+        grid-column: span 1;
         aspect-ratio: 1.1;
     }
 }
@@ -801,7 +806,7 @@ footer {
 @media (max-width: 768px) {
     .nav { display: none; }
     .hamb { display: block; }
-    
+
     .intro,
     .about,
     .disc-head,
@@ -810,24 +815,24 @@ footer {
         grid-template-columns: 1fr;
         display: grid;
     }
-    
+
     .disc-text-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form { grid-template-columns: 1fr; }
     .hero-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
     .item-info { flex-direction: column; align-items: flex-start; gap: 4px; }
-    
+
     .gallery {
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .i1, .i2, .i3, .i4 { 
+
+    .i1, .i2, .i3, .i4 {
         grid-column: span 1;
         aspect-ratio: 1.1;
     }
-    
+
     .work-head { flex-direction: column; gap: 14px; }
 }
 
@@ -835,7 +840,7 @@ footer {
     :root {
         --pad: clamp(12px, 3vw, 20px);
     }
-    
+
     .cursor { display: none; }
     .hero { min-height: 480px; padding-bottom: 20px; }
     .hero h1 { margin: 8px 0 16px; }
@@ -845,17 +850,17 @@ footer {
     .work-head { align-items: flex-start; gap: 12px; }
     .filters { gap: 10px; }
     .service { gap: 12px; }
-    
-    .gallery { 
+
+    .gallery {
         grid-template-columns: 1fr;
-        gap: 8px; 
+        gap: 8px;
     }
-    
-    .i1, .i2, .i3, .i4 { 
+
+    .i1, .i2, .i3, .i4 {
         grid-column: span 1;
         aspect-ratio: 1.1;
     }
-    
+
     .contact h2 { line-height: .75; }
     .contact { min-height: 60vh; }
     .form { gap: 8px; }

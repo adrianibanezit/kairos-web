@@ -5,51 +5,101 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>KAIROS VISUALS — Creative Studio</title>
+    <title>KAIROS VISUALS — Fotógrafo en Almería | Eventos, Bailes y Vídeo</title>
+    <meta name="description" content="Fotógrafo y creador de contenido en Almería especializado en eventos, baile, deporte y vídeo. KAIROS VISUALS crea imágenes con identidad, movimiento y actitud.">
+    <meta name="keywords" content="fotógrafo Almería, fotografía eventos, fotógrafo de baile, video Almería, contenido visual, fotografía de marca, KAIROS VISUALS">
+    <meta name="author" content="KAIROS VISUALS">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060606">
+    <link rel="canonical" href="https://kairos-web-azure.vercel.app/">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KAIROS VISUALS — Fotógrafo en Almería">
+    <meta property="og:description" content="Fotografía, vídeo y creación de contenido para marcas, personas y proyectos con identidad.">
+    <meta property="og:url" content="https://kairos-web-azure.vercel.app/">
+    <meta property="og:image" content="https://kairos-web-azure.vercel.app/img/logo-white.png">
+    <meta property="og:site_name" content="KAIROS VISUALS">
+    <meta property="og:locale" content="es_ES">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KAIROS VISUALS — Fotógrafo en Almería">
+    <meta name="twitter:description" content="Fotografía, vídeo y creación de contenido para marcas, personas y proyectos con identidad.">
+    <meta name="twitter:image" content="https://kairos-web-azure.vercel.app/img/logo-white.png">
+
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Manrope:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="css/styles.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);} 
+        gtag('js', new Date());
+        gtag('config', 'G-YOUR-GA-ID', {
+            anonymize_ip: true,
+            send_page_view: true
+        });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "KAIROS VISUALS",
+      "description": "Fotógrafo y creador de contenido en Almería especializado en eventos, baile, deporte y vídeo.",
+      "url": "https://kairos-web-azure.vercel.app/",
+      "email": "kairos.visuals@gmail.com",
+      "areaServed": "Almería, España",
+      "serviceType": [
+        "Fotografía profesional",
+        "Video profesional",
+        "Creación de contenido",
+        "Eventos y videografía"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/kairos.visuals_",
+        "https://www.tiktok.com/@kairos.visuals_"
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
-    <div class="cursor"></div>
+    <div class="cursor" aria-hidden="true"></div>
 
     <header>
 
-        <a class="logo logo-img" href="#top" aria-label="KAIROS VISUALS">
-            <img src="img/logo-white.png" alt="KAIROS VISUALS">
+        <a class="logo logo-img" href="#top" aria-label="KAIROS VISUALS - Ir al inicio">
+            <img src="img/logo-white.png" alt="KAIROS VISUALS logo">
         </a>
 
-        <nav class="nav">
+        <nav class="nav" aria-label="Navegación principal">
             <a href="#work">Trabajo</a>
             <a href="#services">Servicios</a>
             <a href="#about">Sobre mí</a>
             <a href="#contact">Contacto</a>
         </nav>
 
-        <button class="hamb" aria-label="Abrir menú">☰</button>
+        <button class="hamb" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
     </header>
 
-
-    <div class="mobile-menu">
-
+    <div class="mobile-menu" aria-label="Menú móvil">
         <a href="#work">Trabajo</a>
         <a href="#services">Servicios</a>
         <a href="#about">Sobre mí</a>
         <a href="#contact">Contacto</a>
-
     </div>
-
 
     <main id="top">
 
-
-        <!-- ==============================
-             HERO
-        =============================== -->
-
-        <section class="hero">
+        <section class="hero" aria-label="Portada principal de KAIROS VISUALS">
 
             <div class="hero-slideshow" aria-label="Galería destacada">
 
@@ -57,6 +107,9 @@
                     <img
                         src="img/hero/hero-01.jpg"
                         alt="KAIROS Visuals — fotografía destacada"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
                     >
                 </div>
 
@@ -64,6 +117,8 @@
                     <img
                         src="img/hero/hero-02.jpg"
                         alt="KAIROS Visuals — fotografía destacada"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
@@ -71,6 +126,8 @@
                     <img
                         src="img/hero/hero-03.jpg"
                         alt="KAIROS Visuals — fotografía destacada"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
@@ -78,17 +135,15 @@
                     <img
                         src="img/hero/hero-04.jpg"
                         alt="KAIROS Visuals — fotografía destacada"
+                        loading="lazy"
+                        decoding="async"
                     >
                 </div>
 
             </div>
 
-
             <div class="hero-content">
-
-                <div class="micro">
-                    KAIROS VISUALS · 2026
-                </div>
+                <div class="micro">KAIROS VISUALS · 2026</div>
 
                 <h1>
                     IMÁGENES
@@ -96,36 +151,21 @@
                 </h1>
 
                 <div class="hero-bottom">
-
                     <p>
                         Fotografía, vídeo y creación de contenido para personas,
                         marcas, deporte, baile y proyectos que quieren ser vistos
                         de otra manera.
                     </p>
 
-                    <div class="scroll">
-                        SCROLL ↓
-                    </div>
-
+                    <div class="scroll" aria-label="Scroll para seguir leyendo">SCROLL ↓</div>
                 </div>
-
             </div>
 
         </section>
 
-
-        <!-- ==============================
-             INTRO
-        =============================== -->
-
         <section class="intro reveal">
-
             <div>
-
-                <div class="label">
-                    01 / Intro
-                </div>
-
+                <div class="label">01 / Intro</div>
                 <h2>
                     IMÁGENES
                     <br>
@@ -133,692 +173,227 @@
                     <br>
                     MOVIMIENTO.
                 </h2>
-
             </div>
-
 
             <div class="intro-copy">
-
-                <strong>
-                    No se trata solo de hacer una fotografía.
-                </strong>
-
+                <strong>No se trata solo de hacer una fotografía.</strong>
                 Se trata de capturar la energía, el movimiento y aquello
                 que hace que un proyecto merezca ser contado.
-
             </div>
-
         </section>
 
-
-        <!-- ==============================
-             WORK
-        =============================== -->
-
-        <section id="work" class="reveal">
-
-            <div class="label">
-                02 / Selected work
-            </div>
-
+        <section id="work" class="reveal" aria-label="Trabajos seleccionados">
+            <div class="label">02 / Selected work</div>
 
             <div class="work-head">
+                <h2>TRABAJO.</h2>
 
-                <h2>
-                    TRABAJO.
-                </h2>
-
-
-                <div class="filters">
-
-                    <button class="active" data-filter="all">
-                        Todo
-                    </button>
-
-                    <button data-filter="foto">
-                        Foto
-                    </button>
-
-                    <button data-filter="video">
-                        Vídeo
-                    </button>
-
-                    <button data-filter="contenido">
-                        Contenido
-                    </button>
-
+                <div class="filters" role="group" aria-label="Filtrar trabajos">
+                    <button class="active" data-filter="all" aria-pressed="true">Todo</button>
+                    <button data-filter="foto" aria-pressed="false">Foto</button>
+                    <button data-filter="video" aria-pressed="false">Vídeo</button>
+                    <button data-filter="contenido" aria-pressed="false">Contenido</button>
                 </div>
-
             </div>
 
-
-            <div class="gallery">
-
+            <div class="gallery" aria-label="Galería de trabajo">
 
                 <article class="item i1" data-cat="foto">
-
-                    <div class="pic p1"></div>
-
+                    <div class="pic p1" role="img" aria-label="Baile - fotografía"></div>
                     <div class="item-info">
-
-                        <b>
-                            Baile
-                        </b>
-
-                        <span>
-                            Baile · Fotografía
-                        </span>
-
+                        <b>Baile</b>
+                        <span>Baile · Fotografía</span>
                     </div>
-
                 </article>
-
 
                 <article class="item i2 video-item" data-cat="video">
-
-                    <video
-                        class="portfolio-video"
-                        autoplay
-                        muted
-                        loop
-                        playsinline
-                        preload="metadata"
-                    >
-
-                        <source
-                            src="video/vid1.mp4"
-                            type="video/mp4"
-                        >
-
+                    <video class="portfolio-video" autoplay muted loop playsinline preload="metadata" aria-label="Motion reel">
+                        <source src="video/vid1.mp4" type="video/mp4">
                     </video>
-
-
                     <div class="item-info">
-
-                        <b>
-                            Motion
-                        </b>
-
-                        <span>
-                            Vídeo · Reel
-                        </span>
-
+                        <b>Motion</b>
+                        <span>Vídeo · Reel</span>
                     </div>
-
                 </article>
-
 
                 <article class="item i3" data-cat="foto">
-
-                    <div class="pic p3"></div>
-
+                    <div class="pic p3" role="img" aria-label="Deporte - fotografía"></div>
                     <div class="item-info">
-
-                        <b>
-                            Deporte
-                        </b>
-
-                        <span>
-                            Deporte · Foto
-                        </span>
-
+                        <b>Deporte</b>
+                        <span>Deporte · Foto</span>
                     </div>
-
                 </article>
-
 
                 <article class="item i4" data-cat="contenido">
-
-                    <div class="pic p4"></div>
-
+                    <div class="pic p4" role="img" aria-label="Eventos - contenido"></div>
                     <div class="item-info">
-
-                        <b>
-                            Eventos
-                        </b>
-
-                        <span>
-                            Retrato · Contenido
-                        </span>
-
+                        <b>Eventos</b>
+                        <span>Retrato · Contenido</span>
                     </div>
-
                 </article>
 
-
             </div>
-
         </section>
-
-
-        <!-- ==============================
-             LO QUE HAGO
-        =============================== -->
 
         <section class="dark-section reveal">
-
             <div class="discipline-inner">
-
-                <div class="label">
-                    03 / Lo que hago
-                </div>
-
+                <div class="label">03 / Lo que hago</div>
 
                 <div class="disc-head">
-
-                    <h2>
-                        LO QUE
-                        <br>
-                        HAGO.
-                    </h2>
-
-                    <p>
-                        Una mirada centrada en crear imágenes con intención,
-                        movimiento y personalidad.
-                    </p>
-
+                    <h2>LO QUE<br>HAGO.</h2>
+                    <p>Una mirada centrada en crear imágenes con intención, movimiento y personalidad.</p>
                 </div>
-
 
                 <div class="disc-text-grid">
-
-
                     <article class="disc-text-card">
-
-                        <span>
-                            01
-                        </span>
-
-                        <h3>
-                            FOTOGRAFÍA
-                        </h3>
-
-                        <p>
-                            Sesiones, retrato, baile, deporte, eventos y
-                            fotografía para proyectos que necesitan una
-                            imagen cuidada.
-                        </p>
-
+                        <span>01</span>
+                        <h3>FOTOGRAFÍA</h3>
+                        <p>Sesiones, retrato, baile, deporte, eventos y fotografía para proyectos que necesitan una imagen cuidada.</p>
                     </article>
 
-
                     <article class="disc-text-card">
-
-                        <span>
-                            02
-                        </span>
-
-                        <h3>
-                            VÍDEO
-                        </h3>
-
-                        <p>
-                            Reels y piezas verticales pensadas para redes
-                            sociales, con una edición dinámica y adaptada
-                            al proyecto.
-                        </p>
-
+                        <span>02</span>
+                        <h3>VÍDEO</h3>
+                        <p>Reels y piezas verticales pensadas para redes sociales, con una edición dinámica y adaptada al proyecto.</p>
                     </article>
 
-
                     <article class="disc-text-card">
-
-                        <span>
-                            03
-                        </span>
-
-                        <h3>
-                            CREACIÓN DE CONTENIDO
-                        </h3>
-
-                        <p>
-                            Fotografía y vídeo combinados para generar
-                            material visual frecuente y mantener una
-                            presencia constante.
-                        </p>
-
+                        <span>03</span>
+                        <h3>CREACIÓN DE CONTENIDO</h3>
+                        <p>Fotografía y vídeo combinados para generar material visual frecuente y mantener una presencia constante.</p>
                     </article>
-
-
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ==============================
-             ABOUT
-        =============================== -->
-
-        <section class="about reveal" id="about">
-
-            <div class="about-photo"></div>
-
+        <section class="about reveal" id="about" aria-label="Sobre KAIROS VISUALS">
+            <div class="about-photo" role="img" aria-label="Fotografía del creador de KAIROS VISUALS"></div>
 
             <div>
+                <div class="label">04 / About</div>
 
-                <div class="label">
-                    04 / About
-                </div>
+                <h2>DETRÁS DE<br>KAIROS.</h2>
 
-
-                <h2>
-                    DETRÁS DE
-                    <br>
-                    KAIROS.
-                </h2>
-
-
-                <p>
-                    KAIROS VISUALS nace de una idea sencilla: hay momentos,
-                    personas y proyectos que merecen ser vistos de otra manera.
-                </p>
-
-
-                <p>
-                    Soy el creador detrás de KAIROS. Trabajo principalmente
-                    en fotografía y estoy incorporando progresivamente el
-                    vídeo y la creación de contenido a mi forma de trabajar.
-                </p>
-
-
-                <p>
-                    Me interesa capturar movimiento, energía y momentos reales,
-                    creando imágenes que no solo documenten lo que sucede,
-                    sino que transmitan cómo se siente.
-                </p>
-
+                <p>KAIROS VISUALS nace de una idea sencilla: hay momentos, personas y proyectos que merecen ser vistos de otra manera.</p>
+                <p>Soy el creador detrás de KAIROS. Trabajo principalmente en fotografía y estoy incorporando progresivamente el vídeo y la creación de contenido a mi forma de trabajar.</p>
+                <p>Me interesa capturar movimiento, energía y momentos reales, creando imágenes que no solo documenten lo que sucede, sino que transmitan cómo se siente.</p>
             </div>
-
         </section>
 
-
-        <!-- ==============================
-             SERVICES
-        =============================== -->
-
-        <section class="services reveal" id="services">
-
+        <section class="services reveal" id="services" aria-label="Servicios ofrecidos">
             <div class="services-inner">
+                <div class="label">05 / Services</div>
 
-                <div class="label">
-                    05 / Services
-                </div>
-
-
-                <h2>
-                    LO QUE PUEDO
-                    <br>
-                    CREAR CONTIGO.
-                </h2>
-
+                <h2>LO QUE PUEDO<br>CREAR CONTIGO.</h2>
 
                 <div class="service">
-
-                    <small>
-                        01
-                    </small>
-
-                    <h3>
-                        FOTOGRAFÍA
-                    </h3>
-
-                    <p>
-                        Sesiones para personas, marcas, deporte, baile,
-                        eventos y creación de contenido.
-                    </p>
-
+                    <small>01</small>
+                    <h3>FOTOGRAFÍA</h3>
+                    <p>Sesiones para personas, marcas, deporte, baile, eventos y creación de contenido.</p>
                 </div>
-
 
                 <div class="service">
-
-                    <small>
-                        02
-                    </small>
-
-                    <h3>
-                        VÍDEO
-                    </h3>
-
-                    <p>
-                        Contenido audiovisual pensado principalmente para
-                        formatos verticales y redes sociales.
-                    </p>
-
+                    <small>02</small>
+                    <h3>VÍDEO</h3>
+                    <p>Contenido audiovisual pensado principalmente para formatos verticales y redes sociales.</p>
                 </div>
-
 
                 <div class="service">
-
-                    <small>
-                        03
-                    </small>
-
-                    <h3>
-                        CREACIÓN DE CONTENIDO
-                    </h3>
-
-                    <p>
-                        Una combinación de fotografía y vídeo para generar
-                        contenido visual de forma recurrente.
-                    </p>
-
+                    <small>03</small>
+                    <h3>CREACIÓN DE CONTENIDO</h3>
+                    <p>Una combinación de fotografía y vídeo para generar contenido visual de forma recurrente.</p>
                 </div>
-
 
                 <div class="service">
-
-                    <small>
-                        04
-                    </small>
-
-                    <h3>
-                        PROYECTOS
-                    </h3>
-
-                    <p>
-                        Si tienes una idea concreta, podemos construir una
-                        propuesta adaptada a lo que necesitas.
-                    </p>
-
+                    <small>04</small>
+                    <h3>PROYECTOS</h3>
+                    <p>Si tienes una idea concreta, podemos construir una propuesta adaptada a lo que necesitas.</p>
                 </div>
-
             </div>
-
         </section>
 
-
-        <!-- ==============================
-             PROCESS
-        =============================== -->
-
-        <section class="process reveal">
-
+        <section class="process reveal" aria-label="Proceso de trabajo">
             <div class="process-inner">
+                <div class="label">06 / Process</div>
 
-                <div class="label">
-                    06 / Process
-                </div>
-
-
-                <h2>
-                    DE LA IDEA
-                    <br>
-                    A LA IMAGEN.
-                </h2>
-
+                <h2>DE LA IDEA<br>A LA IMAGEN.</h2>
 
                 <div class="steps">
-
-
                     <div class="step">
-
-                        <small>
-                            01
-                        </small>
-
-                        <h3>
-                            PLANIFICAMOS
-                        </h3>
-
-                        <p>
-                            Hablamos de lo que necesitas, definimos el
-                            objetivo y planteamos el contenido.
-                        </p>
-
+                        <small>01</small>
+                        <h3>PLANIFICAMOS</h3>
+                        <p>Hablamos de lo que necesitas, definimos el objetivo y planteamos el contenido.</p>
                     </div>
 
-
                     <div class="step">
-
-                        <small>
-                            02
-                        </small>
-
-                        <h3>
-                            CREAMOS
-                        </h3>
-
-                        <p>
-                            Nos ponemos manos a la obra. Fotografía,
-                            vídeo o ambas cosas.
-                        </p>
-
+                        <small>02</small>
+                        <h3>CREAMOS</h3>
+                        <p>Nos ponemos manos a la obra. Fotografía, vídeo o ambas cosas.</p>
                     </div>
 
-
                     <div class="step">
-
-                        <small>
-                            03
-                        </small>
-
-                        <h3>
-                            EDITO
-                        </h3>
-
-                        <p>
-                            Selecciono y trabajo cada pieza para conseguir
-                            un resultado coherente.
-                        </p>
-
+                        <small>03</small>
+                        <h3>EDITO</h3>
+                        <p>Selecciono y trabajo cada pieza para conseguir un resultado coherente.</p>
                     </div>
 
-
                     <div class="step">
-
-                        <small>
-                            04
-                        </small>
-
-                        <h3>
-                            ENTREGAMOS
-                        </h3>
-
-                        <p>
-                            Recibes el contenido preparado y organizado.
-                        </p>
-
+                        <small>04</small>
+                        <h3>ENTREGAMOS</h3>
+                        <p>Recibes el contenido preparado y organizado.</p>
                     </div>
-
-
                 </div>
-
             </div>
-
         </section>
 
+        <section class="contact reveal" id="contact" aria-label="Contacto">
+            <div class="label">07 / Contacto</div>
 
-        <!-- ==============================
-             CONTACT
-        =============================== -->
-
-        <section class="contact reveal" id="contact">
-
-            <div class="label">
-                07 / Contacto
-            </div>
-
-
-            <h2>
-                ¿HABLAMOS?
-            </h2>
-
-
-            <p>
-                ¿Tienes un proyecto en mente, necesitas contenido para
-                tu marca o simplemente quieres contarme una idea?
-            </p>
-
+            <h2>¿HABLAMOS?</h2>
+            <p>¿Tienes un proyecto en mente, necesitas contenido para tu marca o simplemente quieres contarme una idea?</p>
 
             <div class="contact-links social-links">
-
-
-                <a
-                    href="mailto:kairos.viisuals@gmail.com"
-                    aria-label="Email"
-                >
-                    Email →
-                </a>
-
-
-                <a
-                    href="https://www.instagram.com/"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="Instagram"
-                >
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-
-                        <rect
-                            x="3"
-                            y="3"
-                            width="18"
-                            height="18"
-                            rx="5"
-                        ></rect>
-
-                        <circle
-                            cx="12"
-                            cy="12"
-                            r="4.2"
-                        ></circle>
-
-                        <circle
-                            cx="17.4"
-                            cy="6.7"
-                            r="1"
-                        ></circle>
-
+                <a href="mailto:kairos.visuals@gmail.com" aria-label="Email KAIROS VISUALS">Email →</a>
+                <a href="https://www.instagram.com/kairos.visuals_" target="_blank" rel="noopener noreferrer" aria-label="Instagram KAIROS VISUALS">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                        <circle cx="12" cy="12" r="4.2"></circle>
+                        <circle cx="17.4" cy="6.7" r="1"></circle>
                     </svg>
-
                     Instagram
-
                 </a>
-
-
-                <a
-                    href="https://www.tiktok.com/"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="TikTok"
-                >
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden="true"
-                    >
-
-                        <path
-                            d="M14.5 4c.4 2.2 1.6 3.6 4 3.8v3.1c-1.5 0-2.8-.4-4-1.1v6.4a5.2 5.2 0 1 1-4.2-5.1v3.2a2.1 2.1 0 1 0 1.1 2V4h3.1z"
-                        ></path>
-
+                <a href="https://www.tiktok.com/@kairos.visuals_" target="_blank" rel="noopener noreferrer" aria-label="TikTok KAIROS VISUALS">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M14.5 4c.4 2.2 1.6 3.6 4 3.8v3.1c-1.5 0-2.8-.4-4-1.1v6.4a5.2 5.2 0 1 1-4.2-5.1v3.2a2.1 2.1 0 1 0 1.1 2V4h3.1z"></path>
                     </svg>
-
                     TikTok
-
                 </a>
-
-
-                <a
-                    href="https://wa.me/"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    WhatsApp →
-                </a>
-
-
+                <a href="https://wa.me/34XXXXXXXXX" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp KAIROS VISUALS">WhatsApp →</a>
             </div>
 
-
-            <form
-                class="form"
-                onsubmit="event.preventDefault(); alert('Demo: aquí conectaríamos el formulario con tu email.');"
-            >
-
-                <input
-                    type="text"
-                    placeholder="Nombre"
-                    required
-                >
-
-                <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                >
-
-                <textarea
-                    placeholder="Cuéntame brevemente tu proyecto"
-                ></textarea>
-
-                <button type="submit">
-                    Enviar mensaje
-                </button>
-
+            <form class="form" id="contactForm" aria-label="Formulario de contacto">
+                <input type="text" name="name" placeholder="Nombre" required aria-label="Nombre">
+                <input type="email" name="email" placeholder="Email" required aria-label="Email">
+                <textarea name="message" placeholder="Cuéntame brevemente tu proyecto" aria-label="Proyecto"></textarea>
+                <button type="submit" aria-label="Enviar mensaje">Enviar mensaje</button>
             </form>
-
         </section>
-
 
     </main>
 
-
-    <!-- ==============================
-         FOOTER
-    =============================== -->
-
-    <footer>
-
-        <img
-            class="footer-logo"
-            src="img/logo-white.png"
-            alt="KAIROS VISUALS"
-        >
-
-
-        <span>
-            CREAR. MOSTRAR. CONECTAR.
-        </span>
-
+    <footer role="contentinfo">
+        <img class="footer-logo" src="img/logo-white.png" alt="KAIROS VISUALS logo">
+        <span>CREAR. MOSTRAR. CONECTAR.</span>
 
         <span class="footer-social">
-
-            <a
-                href="https://www.instagram.com/"
-                target="_blank"
-                rel="noopener"
-            >
-                Instagram
-            </a>
-
-            <a
-                href="https://www.tiktok.com/"
-                target="_blank"
-                rel="noopener"
-            >
-                TikTok
-            </a>
-
+            <a href="https://www.instagram.com/kairos.visuals_" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@kairos.visuals_" target="_blank" rel="noopener noreferrer">TikTok</a>
         </span>
 
-
-        <span>
-            © 2026
-        </span>
-
+        <span>© 2026 KAIROS VISUALS</span>
     </footer>
 
-
-    <script src="js/main.js"></script>
-
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

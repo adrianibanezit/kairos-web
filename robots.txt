@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kairos-web-azure.vercel.app/sitemap.xml

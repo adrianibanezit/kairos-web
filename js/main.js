@@ -25,35 +25,23 @@ if (cursor && window.matchMedia('(pointer:fine)').matches) {
    ========================================= */
 
 if ('IntersectionObserver' in window) {
-    const mediaObserver = new IntersectionObserver((entries, observer) => {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-
-            const media = entry.target;
-
-            if (media instanceof HTMLImageElement && media.dataset.src) {
-                media.src = media.dataset.src;
-                media.removeAttribute('data-src');
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                observer.unobserve(img);
             }
-
-            if (media instanceof HTMLSourceElement && media.dataset.src) {
-                media.src = media.dataset.src;
-                media.removeAttribute('data-src');
-            }
-
-            if (media instanceof HTMLVideoElement && media.dataset.src) {
-                media.src = media.dataset.src;
-                media.removeAttribute('data-src');
-            }
-
-            observer.unobserve(media);
         });
     }, {
-        rootMargin: '200px 0px'
+        rootMargin: '50px'
     });
 
-    document.querySelectorAll('img[data-src], source[data-src], video[data-src]').forEach((media) => {
-        mediaObserver.observe(media);
+    document.querySelectorAll('img[data-src]').forEach((img) => {
+        imageObserver.observe(img);
     });
 }
 
@@ -115,6 +103,7 @@ if (ham && mobileMenu) {
         });
     });
 
+    // Cerrar menú al hacer clic fuera
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !ham.contains(e.target)) {
             mobileMenu.classList.remove('open');
@@ -143,73 +132,69 @@ if (ham && mobileMenu) {
         }
     });
 
-    const preloadNextSlides = () => {
-        slides.forEach((slide, index) => {
-            const img = slide.querySelector('img[data-src]');
-            if (!img) return;
-            if (index === currentSlide || index === (currentSlide + 1) % slides.length) {
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-            }
-        });
-    };
-
-    preloadNextSlides();
-
     setInterval(() => {
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
-        preloadNextSlides();
     }, slideDuration);
 })();
 
 /* =========================================
-   VIDEO PORTFOLIO — CARGA DIFERIDA
-   ========================================= */
-
-const portfolioVideo = document.querySelector('.portfolio-video');
-if (portfolioVideo) {
-    const loadVideo = () => {
-        const source = portfolioVideo.querySelector('source[data-src]');
-        if (source && !source.src) {
-            source.src = source.dataset.src;
-            portfolioVideo.load();
-            portfolioVideo.play().catch(() => {});
-        }
-    };
-
-    const videoObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                loadVideo();
-                observer.unobserve(portfolioVideo);
-            }
-        });
-    }, { rootMargin: '200px 0px' });
-
-    videoObserver.observe(portfolioVideo);
-}
-
-/* =========================================
-   FORMULARIO CONTACTO
+   FORMULARIO CONTACTO CON VERCEL SERVERLESS
    ========================================= */
 
 const contactForm = document.querySelector('#contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
         event.preventDefault();
 
         const formData = new FormData(contactForm);
-        const name = formData.get('name')?.toString().trim() || 'Cliente';
-        const email = formData.get('email')?.toString().trim() || '';
-        const message = formData.get('message')?.toString().trim() || '';
+        const name = String(formData.get('name') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const message = String(formData.get('message') || '').trim();
 
-        const mailtoLink = `mailto:kairos.visuals@gmail.com?subject=${encodeURIComponent('Nuevo mensaje desde la web - ' + name)}&body=${encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`)}`;
+        // Validar datos en cliente
+        if (!name || !email || !message) {
+            alert('Por favor, rellena todos los campos.');
+            return;
+        }
 
-        window.location.href = mailtoLink;
+        // Validar formato email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Por favor, introduce un email válido.');
+            return;
+        }
 
-        contactForm.reset();
-        alert('Gracias. Tu mensaje se abrirá en tu cliente de correo para enviarlo.');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.disabled = true;
+        submitButton.textContent = 'Enviando...';
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || 'No se pudo enviar el mensaje.');
+            }
+
+            // Éxito
+            contactForm.reset();
+            alert('¡Gracias! Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto pronto.');
+        } catch (error) {
+            console.error('Error:', error);
+            alert(error.message || 'Ha ocurrido un error al enviar el mensaje. Por favor, intenta de nuevo.');
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = originalText;
+        }
     });
 }

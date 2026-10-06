@@ -1,865 +1,1060 @@
 <!doctype html>
-
 <html lang="es">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="utf-8">
+    <title>KAIROS VISUALS — Fotografía y vídeo en Almería</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fotografía, vídeo y contenido visual en Almería para personas, proyectos y marcas. KAIROS VISUALS cuenta lo que haces a través de imágenes con movimiento, energía y personalidad.">
 
-<title>KAIROS VISUALS — Fotografía y vídeo en Almería</title>
+    <meta name="keywords" content="fotógrafo Almería, fotografía Almería, fotógrafo eventos Almería, fotógrafo baile Almería, fotógrafo deporte Almería, vídeo Almería, creación de contenido Almería, KAIROS VISUALS">
 
-<meta name="description" content="Fotografía, vídeo y contenido visual en Almería para personas, proyectos y marcas. KAIROS VISUALS cuenta lo que haces a través de imágenes con movimiento, energía y personalidad.">
+    <meta name="author" content="KAIROS VISUALS">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#060606">
 
-<meta name="keywords" content="fotógrafo Almería, fotografía Almería, fotógrafo eventos Almería, fotógrafo baile Almería, fotógrafo deporte Almería, vídeo Almería, creación de contenido Almería, KAIROS VISUALS">
+    <link rel="canonical" href="https://kairosvisuals.vercel.app/">
 
-<meta name="author" content="KAIROS VISUALS">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KAIROS VISUALS — Fotografía y vídeo en Almería">
+    <meta property="og:description" content="Fotografía, vídeo y contenido visual para personas, proyectos y marcas que quieren mostrar lo que hacen de una forma real y con personalidad.">
+    <meta property="og:url" content="https://kairosvisuals.vercel.app/">
+    <meta property="og:image" content="https://kairosvisuals.vercel.app/img/logo-white.png">
+    <meta property="og:site_name" content="KAIROS VISUALS">
+    <meta property="og:locale" content="es_ES">
 
-<meta name="robots" content="index, follow">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KAIROS VISUALS — Fotografía y vídeo en Almería">
+    <meta name="twitter:description" content="Fotografía, vídeo y contenido visual para personas, proyectos y marcas que quieren mostrar lo que hacen de una forma real y con personalidad.">
+    <meta name="twitter:image" content="https://kairosvisuals.vercel.app/img/logo-white.png">
 
-<meta name="theme-color" content="#060606">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
 
-<link rel="canonical" href="https://kairosvisuals.vercel.app/">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<meta property="og:type" content="website">
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Manrope:wght@400;500;600;700;800&display=swap"
+    >
 
-<meta property="og:title" content="KAIROS VISUALS — Fotografía y vídeo en Almería">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
 
-<meta property="og:description" content="Fotografía, vídeo y contenido visual para personas, proyectos y marcas que quieren mostrar lo que hacen de una forma real y con personalidad.">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"></script>
 
-<meta property="og:url" content="https://kairosvisuals.vercel.app/">
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-<meta property="og:image" content="https://kairosvisuals.vercel.app/img/logo-white.png">
+        function gtag() {
+            dataLayer.push(arguments);
+        }
 
-<meta property="og:site_name" content="KAIROS VISUALS">
+        gtag('js', new Date());
 
-<meta property="og:locale" content="es_ES">
+        gtag('config', 'G-YOUR-GA-ID', {
+            anonymize_ip: true,
+            send_page_view: true
+        });
+    </script>
 
-<meta name="twitter:card" content="summary_large_image">
-
-<meta name="twitter:title" content="KAIROS VISUALS — Fotografía y vídeo en Almería">
-
-<meta name="twitter:description" content="Fotografía, vídeo y contenido visual para personas, proyectos y marcas que quieren mostrar lo que hacen de una forma real y con personalidad.">
-
-<meta name="twitter:image" content="https://kairosvisuals.vercel.app/img/logo-white.png">
-
-<link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-
-<link rel="icon" href="favicon/favicon.png" type="image/png">
-
-<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Manrope:wght@400;500;600;700;800&display=swap">
-
-<link rel="stylesheet" href="css/styles.css">
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"></script>
-
-<script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "KAIROS VISUALS",
+        "description": "Fotografía, vídeo y contenido visual en Almería para personas, proyectos y marcas.",
+        "url": "https://kairosvisuals.vercel.app/",
+        "email": "kairos.visuals@gmail.com",
+        "areaServed": "Almería, España",
+        "serviceType": [
+            "Fotografía profesional",
+            "Fotografía de eventos",
+            "Fotografía deportiva",
+            "Fotografía de baile",
+            "Vídeo",
+            "Creación de contenido"
+        ],
+        "sameAs": [
+            "https://www.instagram.com/kairos.visuals_",
+            "https://www.tiktok.com/@kairos.visuals_"
+        ]
     }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-YOUR-GA-ID', {
-        anonymize_ip: true,
-        send_page_view: true
-    });
-</script>
-
-<script type="application/ld+json">
-```
-
-{
-"@context": "https://schema.org",
-"@type": "ProfessionalService",
-"name": "KAIROS VISUALS",
-"description": "Fotografía, vídeo y contenido visual en Almería para personas, proyectos y marcas.",
-"url": "https://kairosvisuals.vercel.app/",
-"email": "[kairos.visuals@gmail.com](mailto:kairos.visuals@gmail.com)",
-"areaServed": "Almería, España",
-"serviceType": [
-"Fotografía profesional",
-"Fotografía de eventos",
-"Fotografía deportiva",
-"Fotografía de baile",
-"Vídeo",
-"Creación de contenido"
-],
-"sameAs": [
-"https://www.instagram.com/kairos.visuals_",
-"https://www.tiktok.com/@kairos.visuals_"
-]
-} </script>
+    </script>
 
 </head>
 
 <body>
 
-<div class="cursor" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
 
-<header>
+    <!-- HEADER -->
+    <header>
 
-```
-<a class="logo logo-img" href="#top" aria-label="KAIROS VISUALS - Ir al inicio">
-
-    <img
-        src="img/logo-white.png"
-        alt="KAIROS VISUALS logo"
-        width="135"
-        height="45"
-        loading="lazy"
-        decoding="async"
-    >
-
-</a>
-
-<nav class="nav" aria-label="Navegación principal">
-
-    <a href="#work">Trabajo</a>
-
-    <a href="#services">Servicios</a>
-
-    <a href="#about">Sobre mí</a>
-
-    <a href="#contact">Contacto</a>
-
-</nav>
-
-<button class="hamb" aria-label="Abrir menú" aria-expanded="false">☰</button>
-```
-
-</header>
-
-<div class="mobile-menu" aria-label="Menú móvil">
-
-```
-<a href="#work">Trabajo</a>
-
-<a href="#services">Servicios</a>
-
-<a href="#about">Sobre mí</a>
-
-<a href="#contact">Contacto</a>
-```
-
-</div>
-
-<main id="top">
-
-```
-<section class="hero" aria-label="Portada principal de KAIROS VISUALS">
-
-    <div class="hero-slideshow" aria-label="Galería destacada">
-
-        <div class="hero-slide active">
-
+        <a
+            class="logo logo-img"
+            href="#top"
+            aria-label="KAIROS VISUALS - Ir al inicio"
+        >
             <img
-                src="img/hero/hero-01.avif"
-                alt="Fotografía de KAIROS Visuals en Almería"
-                loading="eager"
-                fetchpriority="high"
-                decoding="async"
-                width="1920"
-                height="1080"
-            >
-
-        </div>
-
-        <div class="hero-slide">
-
-            <img
-                data-src="img/hero/hero-02.avif"
-                alt="Trabajo fotográfico de KAIROS Visuals"
+                src="img/logo-white.png"
+                alt="KAIROS VISUALS logo"
+                width="135"
+                height="45"
                 loading="lazy"
                 decoding="async"
-                width="1920"
-                height="1080"
             >
-
-        </div>
-
-        <div class="hero-slide">
-
-            <img
-                data-src="img/hero/hero-03.avif"
-                alt="Fotografía deportiva de KAIROS Visuals"
-                loading="lazy"
-                decoding="async"
-                width="1920"
-                height="1080"
-            >
-
-        </div>
-
-        <div class="hero-slide">
-
-            <img
-                data-src="img/hero/hero-04.avif"
-                alt="Fotografía de baile de KAIROS Visuals"
-                loading="lazy"
-                decoding="async"
-                width="1920"
-                height="1080"
-            >
-
-        </div>
-
-    </div>
-
-    <div class="hero-content">
-
-        <div class="micro">KAIROS VISUALS · ALMERÍA · 2026</div>
-
-        <h1>
-            LO QUE HACES
-            <span>MERECE VERSE.</span>
-        </h1>
-
-        <div class="hero-bottom">
-
-            <p>
-                Fotografía, vídeo y contenido visual para personas,
-                proyectos y marcas que quieren mostrar lo que hacen
-                de una forma real, dinámica y con personalidad.
-            </p>
-
-            <div class="scroll" aria-label="Scroll para seguir leyendo">
-                SCROLL ↓
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="intro reveal">
-
-    <div>
-
-        <div class="label">01 / La mirada</div>
-
-        <h2>
-            NO SOLO
-            <br>
-            <em>CAPTURO</em>
-            <br>
-            MOMENTOS.
-        </h2>
-
-    </div>
-
-    <div class="intro-copy">
-
-        <strong>Quiero que una imagen haga sentir algo.</strong>
-
-        El movimiento, la energía, las personas y esos pequeños
-        detalles que hacen que un momento tenga sentido.
-        Porque una buena imagen no solo muestra lo que estaba pasando:
-        consigue que quieras estar allí.
-
-    </div>
-
-</section>
-
-
-<section id="work" class="reveal" aria-label="Trabajos seleccionados">
-
-    <div class="label">02 / Trabajo seleccionado</div>
-
-    <div class="work-head">
-
-        <h2>TRABAJO.</h2>
-
-        <div class="filters" role="group" aria-label="Filtrar trabajos">
-
-            <button class="active" data-filter="all" aria-pressed="true">
-                Todo
-            </button>
-
-            <button data-filter="foto" aria-pressed="false">
-                Foto
-            </button>
-
-            <button data-filter="video" aria-pressed="false">
-                Vídeo
-            </button>
-
-            <button data-filter="contenido" aria-pressed="false">
-                Contenido
-            </button>
-
-        </div>
-
-    </div>
-
-    <div class="gallery" aria-label="Galería de trabajo">
-
-        <article class="item i1" data-cat="foto">
-
-            <div
-                class="pic p1"
-                role="img"
-                aria-label="Fotografía de baile realizada por KAIROS Visuals">
-            </div>
-
-            <div class="item-info">
-
-                <b>Baile</b>
-
-                <span>Fotografía · Movimiento</span>
-
-            </div>
-
-        </article>
-
-
-        <article class="item i2 video-item" data-cat="video">
-
-            <video
-                class="portfolio-video"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="none"
-                aria-label="Reel de vídeo realizado por KAIROS Visuals"
-            >
-
-                <source data-src="video/vid1.mp4" type="video/mp4">
-
-            </video>
-
-            <div class="item-info">
-
-                <b>Motion</b>
-
-                <span>Vídeo · Reel</span>
-
-            </div>
-
-        </article>
-
-
-        <article class="item i3" data-cat="foto">
-
-            <div
-                class="pic p3"
-                role="img"
-                aria-label="Fotografía deportiva realizada por KAIROS Visuals">
-            </div>
-
-            <div class="item-info">
-
-                <b>Deporte</b>
-
-                <span>Fotografía · Acción</span>
-
-            </div>
-
-        </article>
-
-
-        <article class="item i4" data-cat="contenido">
-
-            <div
-                class="pic p4"
-                role="img"
-                aria-label="Fotografía de evento y contenido realizada por KAIROS Visuals">
-            </div>
-
-            <div class="item-info">
-
-                <b>Eventos</b>
-
-                <span>Fotografía · Contenido</span>
-
-            </div>
-
-        </article>
-
-    </div>
-
-</section>
-
-
-<section class="dark-section reveal">
-
-    <div class="discipline-inner">
-
-        <div class="label">03 / Para lo que lo hacemos</div>
-
-        <div class="disc-head">
-
-            <h2>
-                PARA LO QUE
-                <br>
-                ESTÁ PASANDO.
-            </h2>
-
-            <p>
-                Cada proyecto tiene algo diferente que contar.
-                Mi trabajo es encontrarlo y convertirlo en imágenes
-                que puedas recordar, compartir y utilizar.
-            </p>
-
-        </div>
-
-        <div class="disc-text-grid">
-
-            <article class="disc-text-card">
-
-                <span>01</span>
-
-                <h3>MOMENTOS</h3>
-
-                <p>
-                    Actuaciones, eventos, sesiones y momentos personales.
-                    Imágenes que conservan lo que ocurrió y, sobre todo,
-                    cómo se vivió.
-                </p>
-
-            </article>
-
-
-            <article class="disc-text-card">
-
-                <span>02</span>
-
-                <h3>MOVIMIENTO</h3>
-
-                <p>
-                    Baile, deporte y cualquier situación donde todo sucede
-                    rápido. Busco la energía, la acción y ese instante
-                    que resume lo que estaba pasando.
-                </p>
-
-            </article>
-
-
-            <article class="disc-text-card">
-
-                <span>03</span>
-
-                <h3>PRESENCIA</h3>
-
-                <p>
-                    Personas, marcas y proyectos que necesitan algo nuevo
-                    que mostrar. Contenido pensado para que tu trabajo
-                    tenga presencia también cuando tú no estás delante.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="about reveal" id="about" aria-label="Sobre KAIROS VISUALS">
-
-    <div
-        class="about-photo"
-        role="img"
-        aria-label="Fotografía de Adrián, creador de KAIROS VISUALS">
-    </div>
-
-    <div>
-
-        <div class="label">04 / Sobre mí</div>
-
-        <h2>
-            DETRÁS DE
-            <br>
-            KAIROS.
-        </h2>
-
-        <p>
-            Soy Adri, fotógrafo y creador de KAIROS VISUALS.
-        </p>
-
-        <p>
-            KAIROS nace de algo bastante sencillo:
-            me gusta observar lo que ocurre y encontrar la forma
-            de convertirlo en una imagen que tenga algo que decir.
-        </p>
-
-        <p>
-            Empecé con la fotografía y, con el tiempo, he ido
-            incorporando el vídeo y la creación de contenido.
-            Hoy combino las tres disciplinas cuando el proyecto
-            lo necesita, siempre buscando que el resultado tenga
-            sentido y no sea simplemente contenido por hacer contenido.
-        </p>
-
-        <p>
-            Me interesa especialmente trabajar con personas,
-            movimiento y proyectos que están pasando cosas:
-            una actuación, una competición, un evento, una sesión
-            personal o una marca que quiere enseñar lo que hace.
-        </p>
-
-        <p>
-            No quiero limitarme a hacer imágenes bonitas.
-            Quiero que cuando vuelvas a ver una fotografía
-            puedas recordar cómo se sentía estar allí.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="services reveal" id="services" aria-label="Servicios ofrecidos">
-
-    <div class="services-inner">
-
-        <div class="label">05 / Qué podemos crear</div>
-
-        <h2>
-            LO QUE PUEDO
-            <br>
-            HACER CONTIGO.
-        </h2>
-
-
-        <div class="service">
-
-            <small>01</small>
-
-            <h3>FOTOGRAFÍA</h3>
-
-            <p>
-                Sesiones, retratos, baile, deporte, eventos y proyectos
-                que necesitan imágenes capaces de contar lo que está pasando.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <small>02</small>
-
-            <h3>VÍDEO</h3>
-
-            <p>
-                Reels y piezas audiovisuales pensadas para transmitir
-                movimiento, personalidad y ritmo en redes sociales.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <small>03</small>
-
-            <h3>CONTENIDO</h3>
-
-            <p>
-                Fotografía y vídeo combinados para generar material
-                de forma puntual o recurrente y que tu proyecto
-                siempre tenga algo nuevo que mostrar.
-            </p>
-
-        </div>
-
-
-        <div class="service">
-
-            <small>04</small>
-
-            <h3>PROYECTOS</h3>
-
-            <p>
-                Si tienes una idea que no encaja en ninguna categoría,
-                mejor. Cuéntamela y vemos juntos cómo podemos llevarla
-                a imágenes.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="process reveal" aria-label="Proceso de trabajo">
-
-    <div class="process-inner">
-
-        <div class="label">06 / Cómo trabajo</div>
-
-        <h2>
-            DE LA IDEA
-            <br>
-            A LA IMAGEN.
-        </h2>
-
-        <div class="steps">
-
-            <div class="step">
-
-                <small>01</small>
-
-                <h3>HABLAMOS</h3>
-
-                <p>
-                    Me cuentas qué estás preparando, qué necesitas
-                    y qué quieres conseguir. No hace falta que lo
-                    tengas todo decidido.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <small>02</small>
-
-                <h3>PLANIFICAMOS</h3>
-
-                <p>
-                    Le damos forma a la idea, definimos qué vamos
-                    a crear y cómo aprovechar mejor el tiempo y
-                    el espacio que tenemos.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <small>03</small>
-
-                <h3>CREAMOS</h3>
-
-                <p>
-                    Llegamos al momento de hacerlo realidad:
-                    fotografiar, grabar o combinar ambas cosas
-                    según lo que necesite el proyecto.
-                </p>
-
-            </div>
-
-
-            <div class="step">
-
-                <small>04</small>
-
-                <h3>ENTREGO</h3>
-
-                <p>
-                    Selecciono y edito cada pieza para que recibas
-                    un resultado cuidado, coherente y listo para
-                    utilizar.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="contact reveal" id="contact" aria-label="Contacto">
-
-    <div class="label">07 / Hablemos</div>
-
-    <h2>
-        ¿TIENES
-        <br>
-        ALGO EN MENTE?
-    </h2>
-
-    <p>
-        Una sesión, un evento, una competición, contenido para redes
-        o simplemente una idea que todavía no sabes cómo llevar a cabo.
-        Cuéntame qué estás preparando, qué quieres conseguir o
-        simplemente qué tienes en la cabeza. Lo hablamos.
-    </p>
-
-
-    <div class="contact-links social-links">
-
-        <a
-            href="mailto:kairos.visuals@gmail.com"
-            aria-label="Email KAIROS VISUALS"
-        >
-            Email →
         </a>
 
+        <nav class="nav" aria-label="Navegación principal">
 
-        <a
-            href="https://www.instagram.com/kairos.visuals_"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram KAIROS VISUALS"
-        >
+            <a href="#work">Trabajo</a>
+            <a href="#services">Servicios</a>
+            <a href="#about">Sobre mí</a>
+            <a href="#contact">Contacto</a>
 
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-
-                <rect
-                    x="3"
-                    y="3"
-                    width="18"
-                    height="18"
-                    rx="5">
-                </rect>
-
-                <circle
-                    cx="12"
-                    cy="12"
-                    r="4.2">
-                </circle>
-
-                <circle
-                    cx="17.4"
-                    cy="6.7"
-                    r="1">
-                </circle>
-
-            </svg>
-
-            Instagram
-
-        </a>
-
-
-        <a
-            href="https://www.tiktok.com/@kairos.visuals_"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="TikTok KAIROS VISUALS"
-        >
-
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-
-                <path
-                    d="M14.5 4c.4 2.2 1.6 3.6 4 3.8v3.1c-1.5 0-2.8-.4-4-1.1v6.4a5.2 5.2 0 1 1-4.2-5.1v3.2a2.1 2.1 0 1 0 1.1 2V4h3.1z">
-                </path>
-
-            </svg>
-
-            TikTok
-
-        </a>
-
-
-        <a
-            href="https://wa.me/34XXXXXXXXX"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp KAIROS VISUALS"
-        >
-            WhatsApp →
-        </a>
-
-    </div>
-
-
-    <form
-        class="form"
-        id="contactForm"
-        aria-label="Formulario de contacto"
-    >
-
-        <input
-            type="text"
-            name="name"
-            placeholder="Nombre"
-            required
-            aria-label="Nombre"
-        >
-
-        <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            aria-label="Email"
-        >
-
-        <textarea
-            name="message"
-            placeholder="Cuéntame qué estás preparando o qué tienes en mente"
-            aria-label="Proyecto"
-        ></textarea>
+        </nav>
 
         <button
-            type="submit"
-            aria-label="Enviar mensaje"
+            class="hamb"
+            aria-label="Abrir menú"
+            aria-expanded="false"
         >
-            Enviar mensaje
+            ☰
         </button>
 
-    </form>
+    </header>
 
-</section>
-```
 
-</main>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" aria-label="Menú móvil">
 
-<footer role="contentinfo">
+        <a href="#work">Trabajo</a>
+        <a href="#services">Servicios</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#contact">Contacto</a>
 
-```
-<img
-    class="footer-logo"
-    src="img/logo-white.png"
-    alt="KAIROS VISUALS logo"
-    width="150"
-    height="50"
-    loading="lazy"
-    decoding="async"
->
+    </div>
 
-<span>
-    CREAR. MOSTRAR. CONECTAR.
-</span>
 
-<span class="footer-social">
+    <main id="top">
 
-    <a
-        href="https://www.instagram.com/kairos.visuals_"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        Instagram
-    </a>
 
-    <a
-        href="https://www.tiktok.com/@kairos.visuals_"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        TikTok
-    </a>
+        <!-- HERO -->
+        <section
+            class="hero"
+            aria-label="Portada principal de KAIROS VISUALS"
+        >
 
-</span>
+            <div
+                class="hero-slideshow"
+                aria-label="Galería destacada"
+            >
 
-<span>
-    © 2026 KAIROS VISUALS
-</span>
-```
+                <div class="hero-slide active">
 
-</footer>
+                    <img
+                        src="img/hero/hero-01.avif"
+                        alt="Fotografía de KAIROS Visuals en Almería"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                        width="1920"
+                        height="1080"
+                    >
 
-<script src="js/main.js" defer></script>
+                </div>
+
+
+                <div class="hero-slide">
+
+                    <img
+                        data-src="img/hero/hero-02.avif"
+                        alt="Trabajo fotográfico de KAIROS Visuals"
+                        loading="lazy"
+                        decoding="async"
+                        width="1920"
+                        height="1080"
+                    >
+
+                </div>
+
+
+                <div class="hero-slide">
+
+                    <img
+                        data-src="img/hero/hero-03.avif"
+                        alt="Fotografía deportiva de KAIROS Visuals"
+                        loading="lazy"
+                        decoding="async"
+                        width="1920"
+                        height="1080"
+                    >
+
+                </div>
+
+
+                <div class="hero-slide">
+
+                    <img
+                        data-src="img/hero/hero-04.avif"
+                        alt="Fotografía de baile de KAIROS Visuals"
+                        loading="lazy"
+                        decoding="async"
+                        width="1920"
+                        height="1080"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-content">
+
+                <div class="micro">
+                    KAIROS VISUALS · ALMERÍA · 2026
+                </div>
+
+                <h1>
+                    LO QUE HACES
+                    <span>MERECE VERSE.</span>
+                </h1>
+
+                <div class="hero-bottom">
+
+                    <p>
+                        Fotografía, vídeo y contenido visual para personas,
+                        proyectos y marcas que quieren mostrar lo que hacen
+                        de una forma real, dinámica y con personalidad.
+                    </p>
+
+                    <div
+                        class="scroll"
+                        aria-label="Scroll para seguir leyendo"
+                    >
+                        SCROLL ↓
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+        <section class="intro reveal">
+
+            <div>
+
+                <div class="label">
+                    01 / La mirada
+                </div>
+
+                <h2>
+                    NO SOLO
+                    <br>
+                    <em>CAPTURO</em>
+                    <br>
+                    MOMENTOS.
+                </h2>
+
+            </div>
+
+
+            <div class="intro-copy">
+
+                <strong>
+                    Quiero que una imagen haga sentir algo.
+                </strong>
+
+                El movimiento, la energía, las personas y esos pequeños
+                detalles que hacen que un momento tenga sentido.
+                Porque una buena imagen no solo muestra lo que estaba pasando:
+                consigue que quieras estar allí.
+
+            </div>
+
+        </section>
+
+
+        <!-- WORK -->
+        <section
+            id="work"
+            class="reveal"
+            aria-label="Trabajos seleccionados"
+        >
+
+            <div class="label">
+                02 / Trabajo seleccionado
+            </div>
+
+
+            <div class="work-head">
+
+                <h2>
+                    TRABAJO.
+                </h2>
+
+
+                <div
+                    class="filters"
+                    role="group"
+                    aria-label="Filtrar trabajos"
+                >
+
+                    <button
+                        class="active"
+                        data-filter="all"
+                        aria-pressed="true"
+                    >
+                        Todo
+                    </button>
+
+                    <button
+                        data-filter="foto"
+                        aria-pressed="false"
+                    >
+                        Foto
+                    </button>
+
+                    <button
+                        data-filter="video"
+                        aria-pressed="false"
+                    >
+                        Vídeo
+                    </button>
+
+                    <button
+                        data-filter="contenido"
+                        aria-pressed="false"
+                    >
+                        Contenido
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="gallery"
+                aria-label="Galería de trabajo"
+            >
+
+
+                <!-- BAILE -->
+                <article
+                    class="item i1"
+                    data-cat="foto"
+                >
+
+                    <div
+                        class="pic p1"
+                        role="img"
+                        aria-label="Fotografía de baile realizada por KAIROS Visuals"
+                    ></div>
+
+                    <div class="item-info">
+
+                        <b>
+                            Baile
+                        </b>
+
+                        <span>
+                            Fotografía · Movimiento
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- VIDEO -->
+                <article
+                    class="item i2 video-item"
+                    data-cat="video"
+                >
+
+                    <video
+                        class="portfolio-video"
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="none"
+                        aria-label="Reel de vídeo realizado por KAIROS Visuals"
+                    >
+
+                        <source
+                            data-src="video/vid1.mp4"
+                            type="video/mp4"
+                        >
+
+                    </video>
+
+
+                    <div class="item-info">
+
+                        <b>
+                            Motion
+                        </b>
+
+                        <span>
+                            Vídeo · Reel
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- DEPORTE -->
+                <article
+                    class="item i3"
+                    data-cat="foto"
+                >
+
+                    <div
+                        class="pic p3"
+                        role="img"
+                        aria-label="Fotografía deportiva realizada por KAIROS Visuals"
+                    ></div>
+
+
+                    <div class="item-info">
+
+                        <b>
+                            Deporte
+                        </b>
+
+                        <span>
+                            Fotografía · Acción
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- EVENTOS -->
+                <article
+                    class="item i4"
+                    data-cat="contenido"
+                >
+
+                    <div
+                        class="pic p4"
+                        role="img"
+                        aria-label="Fotografía de evento y contenido realizada por KAIROS Visuals"
+                    ></div>
+
+
+                    <div class="item-info">
+
+                        <b>
+                            Eventos
+                        </b>
+
+                        <span>
+                            Fotografía · Contenido
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- WHAT I DO / POSITIONING -->
+        <section class="dark-section reveal">
+
+            <div class="discipline-inner">
+
+                <div class="label">
+                    03 / Para lo que lo hacemos
+                </div>
+
+
+                <div class="disc-head">
+
+                    <h2>
+                        PARA LO QUE
+                        <br>
+                        ESTÁ PASANDO.
+                    </h2>
+
+                    <p>
+                        Cada proyecto tiene algo diferente que contar.
+                        Mi trabajo es encontrarlo y convertirlo en imágenes
+                        que puedas recordar, compartir y utilizar.
+                    </p>
+
+                </div>
+
+
+                <div class="disc-text-grid">
+
+
+                    <article class="disc-text-card">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            MOMENTOS
+                        </h3>
+
+                        <p>
+                            Actuaciones, eventos, sesiones y momentos personales.
+                            Imágenes que conservan lo que ocurrió y, sobre todo,
+                            cómo se vivió.
+                        </p>
+
+                    </article>
+
+
+                    <article class="disc-text-card">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            MOVIMIENTO
+                        </h3>
+
+                        <p>
+                            Baile, deporte y cualquier situación donde todo sucede
+                            rápido. Busco la energía, la acción y ese instante
+                            que resume lo que estaba pasando.
+                        </p>
+
+                    </article>
+
+
+                    <article class="disc-text-card">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            PRESENCIA
+                        </h3>
+
+                        <p>
+                            Personas, marcas y proyectos que necesitan algo nuevo
+                            que mostrar. Contenido pensado para que tu trabajo
+                            tenga presencia también cuando tú no estás delante.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section
+            class="about reveal"
+            id="about"
+            aria-label="Sobre KAIROS VISUALS"
+        >
+
+            <div
+                class="about-photo"
+                role="img"
+                aria-label="Fotografía de Adrián, creador de KAIROS VISUALS"
+            ></div>
+
+
+            <div>
+
+                <div class="label">
+                    04 / Sobre mí
+                </div>
+
+
+                <h2>
+                    DETRÁS DE
+                    <br>
+                    KAIROS.
+                </h2>
+
+
+                <p>
+                    Soy Adri, fotógrafo y creador de KAIROS VISUALS.
+                </p>
+
+
+                <p>
+                    KAIROS nace de algo bastante sencillo:
+                    me gusta observar lo que ocurre y encontrar la forma
+                    de convertirlo en una imagen que tenga algo que decir.
+                </p>
+
+
+                <p>
+                    Empecé con la fotografía y, con el tiempo, he ido
+                    incorporando el vídeo y la creación de contenido.
+                    Hoy combino las tres disciplinas cuando el proyecto
+                    lo necesita, siempre buscando que el resultado tenga
+                    sentido y no sea simplemente contenido por hacer contenido.
+                </p>
+
+
+                <p>
+                    Me interesa especialmente trabajar con personas,
+                    movimiento y proyectos que están pasando cosas:
+                    una actuación, una competición, un evento, una sesión
+                    personal o una marca que quiere enseñar lo que hace.
+                </p>
+
+
+                <p>
+                    No quiero limitarme a hacer imágenes bonitas.
+                    Quiero que cuando vuelvas a ver una fotografía
+                    puedas recordar cómo se sentía estar allí.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SERVICES -->
+        <section
+            class="services reveal"
+            id="services"
+            aria-label="Servicios ofrecidos"
+        >
+
+            <div class="services-inner">
+
+                <div class="label">
+                    05 / Qué podemos crear
+                </div>
+
+
+                <h2>
+                    LO QUE PUEDO
+                    <br>
+                    HACER CONTIGO.
+                </h2>
+
+
+                <div class="service">
+
+                    <small>
+                        01
+                    </small>
+
+                    <h3>
+                        FOTOGRAFÍA
+                    </h3>
+
+                    <p>
+                        Sesiones, retratos, baile, deporte, eventos y proyectos
+                        que necesitan imágenes capaces de contar lo que está pasando.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <small>
+                        02
+                    </small>
+
+                    <h3>
+                        VÍDEO
+                    </h3>
+
+                    <p>
+                        Reels y piezas audiovisuales pensadas para transmitir
+                        movimiento, personalidad y ritmo en redes sociales.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <small>
+                        03
+                    </small>
+
+                    <h3>
+                        CONTENIDO
+                    </h3>
+
+                    <p>
+                        Fotografía y vídeo combinados para generar material
+                        de forma puntual o recurrente y que tu proyecto
+                        siempre tenga algo nuevo que mostrar.
+                    </p>
+
+                </div>
+
+
+                <div class="service">
+
+                    <small>
+                        04
+                    </small>
+
+                    <h3>
+                        PROYECTOS
+                    </h3>
+
+                    <p>
+                        Si tienes una idea que no encaja en ninguna categoría,
+                        mejor. Cuéntamela y vemos juntos cómo podemos llevarla
+                        a imágenes.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROCESS -->
+        <section
+            class="process reveal"
+            aria-label="Proceso de trabajo"
+        >
+
+            <div class="process-inner">
+
+                <div class="label">
+                    06 / Cómo trabajo
+                </div>
+
+
+                <h2>
+                    DE LA IDEA
+                    <br>
+                    A LA IMAGEN.
+                </h2>
+
+
+                <div class="steps">
+
+
+                    <div class="step">
+
+                        <small>
+                            01
+                        </small>
+
+                        <h3>
+                            HABLAMOS
+                        </h3>
+
+                        <p>
+                            Me cuentas qué estás preparando, qué necesitas
+                            y qué quieres conseguir. No hace falta que lo
+                            tengas todo decidido.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <small>
+                            02
+                        </small>
+
+                        <h3>
+                            PLANIFICAMOS
+                        </h3>
+
+                        <p>
+                            Le damos forma a la idea, definimos qué vamos
+                            a crear y cómo aprovechar mejor el tiempo y
+                            el espacio que tenemos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <small>
+                            03
+                        </small>
+
+                        <h3>
+                            CREAMOS
+                        </h3>
+
+                        <p>
+                            Llegamos al momento de hacerlo realidad:
+                            fotografiar, grabar o combinar ambas cosas
+                            según lo que necesite el proyecto.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <small>
+                            04
+                        </small>
+
+                        <h3>
+                            ENTREGO
+                        </h3>
+
+                        <p>
+                            Selecciono y edito cada pieza para que recibas
+                            un resultado cuidado, coherente y listo para
+                            utilizar.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section
+            class="contact reveal"
+            id="contact"
+            aria-label="Contacto"
+        >
+
+            <div class="label">
+                07 / Hablemos
+            </div>
+
+
+            <h2>
+                ¿TIENES
+                <br>
+                ALGO EN MENTE?
+            </h2>
+
+
+            <p>
+                Una sesión, un evento, una competición, contenido para redes
+                o simplemente una idea que todavía no sabes cómo llevar a cabo.
+                Cuéntame qué estás preparando, qué quieres conseguir o
+                simplemente qué tienes en la cabeza. Lo hablamos.
+            </p>
+
+
+            <div class="contact-links social-links">
+
+
+                <a
+                    href="mailto:kairos.visuals@gmail.com"
+                    aria-label="Email KAIROS VISUALS"
+                >
+                    Email →
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/kairos.visuals_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram KAIROS VISUALS"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <rect
+                            x="3"
+                            y="3"
+                            width="18"
+                            height="18"
+                            rx="5"
+                        ></rect>
+
+                        <circle
+                            cx="12"
+                            cy="12"
+                            r="4.2"
+                        ></circle>
+
+                        <circle
+                            cx="17.4"
+                            cy="6.7"
+                            r="1"
+                        ></circle>
+
+                    </svg>
+
+                    Instagram
+
+                </a>
+
+
+                <a
+                    href="https://www.tiktok.com/@kairos.visuals_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TikTok KAIROS VISUALS"
+                >
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <path
+                            d="M14.5 4c.4 2.2 1.6 3.6 4 3.8v3.1c-1.5 0-2.8-.4-4-1.1v6.4a5.2 5.2 0 1 1-4.2-5.1v3.2a2.1 2.1 0 1 0 1.1 2V4h3.1z"
+                        ></path>
+
+                    </svg>
+
+                    TikTok
+
+                </a>
+
+
+                <a
+                    href="https://wa.me/34XXXXXXXXX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="WhatsApp KAIROS VISUALS"
+                >
+                    WhatsApp →
+                </a>
+
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <form
+                class="form"
+                id="contactForm"
+                aria-label="Formulario de contacto"
+            >
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Nombre"
+                    required
+                    aria-label="Nombre"
+                >
+
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    aria-label="Email"
+                >
+
+
+                <textarea
+                    name="message"
+                    placeholder="Cuéntame qué estás preparando o qué tienes en mente"
+                    aria-label="Proyecto"
+                ></textarea>
+
+
+                <button
+                    type="submit"
+                    aria-label="Enviar mensaje"
+                >
+                    Enviar mensaje
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+
+        <img
+            class="footer-logo"
+            src="img/logo-white.png"
+            alt="KAIROS VISUALS logo"
+            width="150"
+            height="50"
+            loading="lazy"
+            decoding="async"
+        >
+
+
+        <span>
+            CREAR. MOSTRAR. CONECTAR.
+        </span>
+
+
+        <span class="footer-social">
+
+            <a
+                href="https://www.instagram.com/kairos.visuals_"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Instagram
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@kairos.visuals_"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                TikTok
+            </a>
+
+        </span>
+
+
+        <span>
+            © 2026 KAIROS VISUALS
+        </span>
+
+    </footer>
+
+
+    <script src="js/main.js" defer></script>
 
 </body>
 

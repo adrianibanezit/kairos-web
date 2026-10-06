@@ -25,23 +25,35 @@ if (cursor && window.matchMedia('(pointer:fine)').matches) {
    ========================================= */
 
 if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
+    const mediaObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                }
-                observer.unobserve(img);
+            if (!entry.isIntersecting) return;
+
+            const media = entry.target;
+
+            if (media instanceof HTMLImageElement && media.dataset.src) {
+                media.src = media.dataset.src;
+                media.removeAttribute('data-src');
             }
+
+            if (media instanceof HTMLSourceElement && media.dataset.src) {
+                media.src = media.dataset.src;
+                media.removeAttribute('data-src');
+            }
+
+            if (media instanceof HTMLVideoElement && media.dataset.src) {
+                media.src = media.dataset.src;
+                media.removeAttribute('data-src');
+            }
+
+            observer.unobserve(media);
         });
     }, {
-        rootMargin: '50px'
+        rootMargin: '200px 0px'
     });
 
-    document.querySelectorAll('img[data-src]').forEach((img) => {
-        imageObserver.observe(img);
+    document.querySelectorAll('img[data-src], source[data-src], video[data-src]').forEach((media) => {
+        mediaObserver.observe(media);
     });
 }
 
@@ -103,7 +115,6 @@ if (ham && mobileMenu) {
         });
     });
 
-    // Cerrar menú al hacer clic fuera
     document.addEventListener('click', (e) => {
         if (!mobileMenu.contains(e.target) && !ham.contains(e.target)) {
             mobileMenu.classList.remove('open');
@@ -132,12 +143,53 @@ if (ham && mobileMenu) {
         }
     });
 
+    const preloadNextSlides = () => {
+        slides.forEach((slide, index) => {
+            const img = slide.querySelector('img[data-src]');
+            if (!img) return;
+            if (index === currentSlide || index === (currentSlide + 1) % slides.length) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+            }
+        });
+    };
+
+    preloadNextSlides();
+
     setInterval(() => {
         slides[currentSlide].classList.remove('active');
         currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].classList.add('active');
+        preloadNextSlides();
     }, slideDuration);
 })();
+
+/* =========================================
+   VIDEO PORTFOLIO — CARGA DIFERIDA
+   ========================================= */
+
+const portfolioVideo = document.querySelector('.portfolio-video');
+if (portfolioVideo) {
+    const loadVideo = () => {
+        const source = portfolioVideo.querySelector('source[data-src]');
+        if (source && !source.src) {
+            source.src = source.dataset.src;
+            portfolioVideo.load();
+            portfolioVideo.play().catch(() => {});
+        }
+    };
+
+    const videoObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                loadVideo();
+                observer.unobserve(portfolioVideo);
+            }
+        });
+    }, { rootMargin: '200px 0px' });
+
+    videoObserver.observe(portfolioVideo);
+}
 
 /* =========================================
    FORMULARIO CONTACTO

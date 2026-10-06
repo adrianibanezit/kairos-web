@@ -567,7 +567,7 @@ section {
 /* Portfolio images */
 
 .p1 {
-    background-image: url("../img/portfolio/pic-1.jpg");
+    background-image: url("../img/portfolio/pic-1.webp");
 }
 
 
@@ -577,12 +577,12 @@ section {
 
 
 .p3 {
-    background-image: url("../img/portfolio/pic-2.jpg");
+    background-image: url("../img/portfolio/pic-2.webp");
 }
 
 
 .p4 {
-    background-image: url("../img/portfolio/pic-3.jpg");
+    background-image: url("../img/portfolio/pic-3.webp");
 }
 
 

@@ -853,7 +853,7 @@ footer {
     
     .i1, .i2, .i3, .i4 { 
         grid-column: span 1;
-        aspect-ratio: auto;
+        aspect-ratio: 1.1;
     }
     
     .contact h2 { line-height: .75; }

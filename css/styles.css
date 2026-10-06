@@ -309,7 +309,7 @@ section {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 30px;
 }
@@ -368,19 +368,19 @@ section {
     letter-spacing: .12em;
 }
 
-.i1 { grid-column: span 12; aspect-ratio: 1.48; }
-.i2 { grid-column: span 12; aspect-ratio: .77; }
-.i3 { grid-column: span 12; aspect-ratio: .85; }
-.i4 { grid-column: span 12; aspect-ratio: 1.5; }
+.i1 { grid-column: span 2; aspect-ratio: 1.2; }
+.i2 { grid-column: span 2; aspect-ratio: 1.2; }
+.i3 { grid-column: span 2; aspect-ratio: 1.2; }
+.i4 { grid-column: span 2; aspect-ratio: 1.2; }
 
 .i5 {
-    grid-column: span 12;
-    aspect-ratio: 1.25;
+    grid-column: span 2;
+    aspect-ratio: 1.2;
 }
 
 .i6 {
-    grid-column: span 12;
-    aspect-ratio: 1.25;
+    grid-column: span 2;
+    aspect-ratio: 1.2;
 }
 
 /* Portfolio images */
@@ -787,6 +787,17 @@ footer {
     transform: translateY(0);
 }
 
+@media (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .i1, .i2, .i3, .i4 { 
+        grid-column: span 1; 
+        aspect-ratio: 1.1;
+    }
+}
+
 @media (max-width: 768px) {
     .nav { display: none; }
     .hamb { display: block; }
@@ -807,7 +818,16 @@ footer {
     .form { grid-template-columns: 1fr; }
     .hero-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
     .item-info { flex-direction: column; align-items: flex-start; gap: 4px; }
-    .i1, .i2, .i3, .i4 { grid-column: span 12; }
+    
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .i1, .i2, .i3, .i4 { 
+        grid-column: span 1;
+        aspect-ratio: 1.1;
+    }
+    
     .work-head { flex-direction: column; gap: 14px; }
 }
 
@@ -825,7 +845,17 @@ footer {
     .work-head { align-items: flex-start; gap: 12px; }
     .filters { gap: 10px; }
     .service { gap: 12px; }
-    .gallery { gap: 8px; }
+    
+    .gallery { 
+        grid-template-columns: 1fr;
+        gap: 8px; 
+    }
+    
+    .i1, .i2, .i3, .i4 { 
+        grid-column: span 1;
+        aspect-ratio: auto;
+    }
+    
     .contact h2 { line-height: .75; }
     .contact { min-height: 60vh; }
     .form { gap: 8px; }

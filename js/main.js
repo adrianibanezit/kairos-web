@@ -3,11 +3,11 @@
    ========================================= */
 
 const cursor = document.querySelector('.cursor');
-if (cursor) {
+if (cursor && window.matchMedia('(pointer:fine)').matches) {
     window.addEventListener('mousemove', (e) => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
-    });
+    }, { passive: true });
 
     document.querySelectorAll('a, button, .item').forEach((element) => {
         element.addEventListener('mouseenter', () => {
@@ -21,6 +21,31 @@ if (cursor) {
 }
 
 /* =========================================
+   LAZY LOADING OPTIMIZADO
+   ========================================= */
+
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '50px'
+    });
+
+    document.querySelectorAll('img[data-src]').forEach((img) => {
+        imageObserver.observe(img);
+    });
+}
+
+/* =========================================
    ANIMACIONES AL HACER SCROLL
    ========================================= */
 
@@ -30,7 +55,7 @@ const io = new IntersectionObserver((entries) => {
             entry.target.classList.add('show');
         }
     });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach((element) => {
     io.observe(element);
@@ -77,10 +102,18 @@ if (ham && mobileMenu) {
             ham.setAttribute('aria-expanded', 'false');
         });
     });
+
+    // Cerrar menú al hacer clic fuera
+    document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !ham.contains(e.target)) {
+            mobileMenu.classList.remove('open');
+            ham.setAttribute('aria-expanded', 'false');
+        }
+    });
 }
 
 /* =========================================
-   HERO — SLIDESHOW
+   HERO — SLIDESHOW CON OPTIMIZACIÓN
    ========================================= */
 
 (() => {

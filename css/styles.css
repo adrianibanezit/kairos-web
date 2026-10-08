@@ -189,7 +189,7 @@ header {
 
 .hero h1 {
     font-size: clamp(36px, 7.5vw, 125px);
-    line-height: .77;
+    line-height: 0.95;
     letter-spacing: -.095em;
     margin: 12px 0 20px;
     font-weight: 800;
@@ -246,7 +246,7 @@ section {
 
 .intro h2 {
     font-size: clamp(42px, 6.5vw, 116px);
-    line-height: .87;
+    line-height: 1.0;
     letter-spacing: -.08em;
     margin: 0;
 }
@@ -282,7 +282,7 @@ section {
 
 .work-head h2 {
     font-size: clamp(48px, 8vw, 135px);
-    line-height: .8;
+    line-height: 1.0;
     letter-spacing: -.09em;
     margin: 0;
 }
@@ -458,7 +458,7 @@ section {
 
 .disc-head h2 {
     font-size: clamp(42px, 7vw, 115px);
-    line-height: .82;
+    line-height: 1.0;
     letter-spacing: -.08em;
     margin: 0;
 }
@@ -501,7 +501,7 @@ section {
 
 .disc-text-card h3 {
     font-size: clamp(24px, 2.8vw, 48px);
-    line-height: .9;
+    line-height: 1.15;
     letter-spacing: -.07em;
     margin: 12px 0 0 0;
 }
@@ -527,7 +527,7 @@ section {
 
 .about h2 {
     font-size: clamp(42px, 6.5vw, 105px);
-    line-height: .84;
+    line-height: 1.0;
     letter-spacing: -.08em;
     margin: 0 0 20px;
 }
@@ -548,7 +548,7 @@ section {
 
 .services h2 {
     font-size: clamp(42px, 7vw, 110px);
-    line-height: .84;
+    line-height: 1.0;
     letter-spacing: -.08em;
     margin: 0 0 40px;
 }
@@ -569,6 +569,7 @@ section {
     font-size: clamp(24px, 4vw, 34px);
     letter-spacing: -.06em;
     margin: 0;
+    line-height: 1.15;
 }
 
 .service p {
@@ -592,7 +593,7 @@ section {
 
 .process h2 {
     font-size: clamp(42px, 7vw, 110px);
-    line-height: .84;
+    line-height: 1.0;
     letter-spacing: -.08em;
     margin: 0;
 }
@@ -625,6 +626,7 @@ section {
     font-size: clamp(18px, 3vw, 24px);
     letter-spacing: -.05em;
     margin: 12px 0 0 0;
+    line-height: 1.15;
 }
 
 .step p {
@@ -644,7 +646,7 @@ section {
 
 .contact h2 {
     font-size: clamp(48px, 11vw, 190px);
-    line-height: .78;
+    line-height: 0.95;
     letter-spacing: -.1em;
     margin: 0;
 }

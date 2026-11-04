@@ -21,31 +21,6 @@ if (cursor && window.matchMedia('(pointer:fine)').matches) {
 }
 
 /* =========================================
-   LAZY LOADING OPTIMIZADO
-   ========================================= */
-
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                }
-                observer.unobserve(img);
-            }
-        });
-    }, {
-        rootMargin: '50px'
-    });
-
-    document.querySelectorAll('img[data-src]').forEach((img) => {
-        imageObserver.observe(img);
-    });
-}
-
-/* =========================================
    ANIMACIONES AL HACER SCROLL
    ========================================= */
 
@@ -113,7 +88,9 @@ if (ham && mobileMenu) {
 }
 
 /* =========================================
-   HERO — SLIDESHOW CON OPTIMIZACIÓN
+   HERO — SLIDESHOW CON CARGA DIFERIDA
+   La 1.ª foto va en el HTML (LCP). Las demás se piden
+   una a una, solo cuando toca, para no competir con ella.
    ========================================= */
 
 (() => {
@@ -124,18 +101,39 @@ if (ham && mobileMenu) {
     let currentSlide = 0;
     const slideDuration = 5200;
 
+    const loadSlide = (slide) => {
+        const img = slide && slide.querySelector('img[data-hero-src]');
+        if (!img) return;
+
+        if (img.dataset.heroSrcset) img.srcset = img.dataset.heroSrcset;
+        img.src = img.dataset.heroSrc;
+        img.removeAttribute('data-hero-src');
+        img.removeAttribute('data-hero-srcset');
+    };
+
     slides.forEach((slide, index) => {
-        if (index === 0) {
-            slide.classList.add('active');
-        } else {
-            slide.classList.remove('active');
-        }
+        slide.classList.toggle('active', index === 0);
     });
 
+    // Precarga la 2.ª foto cuando la página ya ha terminado de cargar
+    const preloadSecond = () => loadSlide(slides[1]);
+    if (document.readyState === 'complete') {
+        preloadSecond();
+    } else {
+        window.addEventListener('load', preloadSecond, { once: true });
+    }
+
     setInterval(() => {
+        if (document.hidden) return; // pestaña en segundo plano: no animar
+
+        const nextSlide = (currentSlide + 1) % slides.length;
+        loadSlide(slides[nextSlide]); // por si aún no se había cargado
+
         slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
+        currentSlide = nextSlide;
         slides[currentSlide].classList.add('active');
+
+        loadSlide(slides[(currentSlide + 1) % slides.length]); // prepara la siguiente
     }, slideDuration);
 })();
 

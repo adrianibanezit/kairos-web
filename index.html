@@ -21,8 +21,10 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="KAIROS VISUALS — Fotografía y vídeo en Almería">
     <meta property="og:description" content="Fotografía, vídeo y contenido visual para personas, proyectos y marcas que quieren mostrar lo que hacen de una forma real y con personalidad.">
-    <meta property="og:url" content="https://kairosvisuals.vercel.app/">
-    <meta property="og:image" content="https://kairosvisuals.vercel.app/img/logo-white.png">
+    <meta property="og:url" content="https://kairosvisuals.es/">
+    <meta property="og:image" content="https://kairosvisuals.es/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="KAIROS VISUALS">
     <meta property="og:locale" content="es_ES">
 
@@ -30,10 +32,17 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="KAIROS VISUALS — Fotografía y vídeo en Almería">
     <meta name="twitter:description" content="Fotografía, vídeo y contenido visual para personas, proyectos y marcas que quieren mostrar lo que hacen de una forma real y con personalidad.">
-    <meta name="twitter:image" content="https://kairosvisuals.vercel.app/img/logo-white.png">
+    <meta name="twitter:image" content="https://kairosvisuals.es/img/og-image.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Preload imagen LCP del hero -->
+    <link rel="preload" as="image" type="image/avif" fetchpriority="high"
+        imagesrcset="img/hero/hero-01-960.avif 960w, img/hero/hero-01-1440.avif 1440w, img/hero/hero-01-1920.avif 1920w"
+        imagesizes="100vw">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,14 +50,16 @@
 
     <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Manrope:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&family=Manrope:wght@400;700;800&display=swap"
     >
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"></script>
+    <!-- Google Analytics DESACTIVADO: tenía el ID de ejemplo G-YOUR-GA-ID (descargaba el script sin medir nada).
+         Para activarlo: pon tu ID real, descomenta el bloque y añade aviso de cookies si hay visitantes de la UE.
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YOUR-GA-ID"></script>
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -64,6 +75,7 @@
             send_page_view: true
         });
     </script>
+    -->
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -72,7 +84,8 @@
         "@type": "ProfessionalService",
         "name": "KAIROS VISUALS",
         "description": "Fotografía, vídeo y contenido visual en Almería para personas, proyectos y marcas.",
-        "url": "https://kairosvisuals.vercel.app/",
+        "url": "https://kairosvisuals.es/",
+        "image": "https://kairosvisuals.es/img/og-image.jpg",
         "email": "kairos.visuals@gmail.com",
         "areaServed": "Almería, España",
         "serviceType": [
@@ -105,11 +118,10 @@
             aria-label="KAIROS VISUALS - Ir al inicio"
         >
             <img
-                src="img/logo-white.png"
+                src="img/logo-white.webp"
                 alt="KAIROS VISUALS logo"
                 width="135"
                 height="45"
-                loading="lazy"
                 decoding="async"
             >
         </a>
@@ -162,7 +174,9 @@
                 <div class="hero-slide active">
 
                     <img
-                        src="img/hero/hero-01.avif"
+                        src="img/hero/hero-01-1440.avif"
+                        srcset="img/hero/hero-01-960.avif 960w, img/hero/hero-01-1440.avif 1440w, img/hero/hero-01-1920.avif 1920w"
+                        sizes="100vw"
                         alt="Fotografía de KAIROS Visuals en Almería"
                         loading="eager"
                         fetchpriority="high"
@@ -177,9 +191,10 @@
                 <div class="hero-slide">
 
                     <img
-                        data-src="img/hero/hero-02.avif"
+                        data-hero-src="img/hero/hero-02-1440.avif"
+                        data-hero-srcset="img/hero/hero-02-960.avif 960w, img/hero/hero-02-1440.avif 1440w, img/hero/hero-02-1920.avif 1920w"
+                        sizes="100vw"
                         alt="Trabajo fotográfico de KAIROS Visuals"
-                        loading="lazy"
                         decoding="async"
                         width="1920"
                         height="1080"
@@ -191,9 +206,10 @@
                 <div class="hero-slide">
 
                     <img
-                        data-src="img/hero/hero-03.avif"
+                        data-hero-src="img/hero/hero-03-1440.avif"
+                        data-hero-srcset="img/hero/hero-03-960.avif 960w, img/hero/hero-03-1440.avif 1440w, img/hero/hero-03-1920.avif 1920w"
+                        sizes="100vw"
                         alt="Fotografía deportiva de KAIROS Visuals"
-                        loading="lazy"
                         decoding="async"
                         width="1920"
                         height="1080"
@@ -205,9 +221,10 @@
                 <div class="hero-slide">
 
                     <img
-                        data-src="img/hero/hero-04.avif"
+                        data-hero-src="img/hero/hero-04-1440.avif"
+                        data-hero-srcset="img/hero/hero-04-960.avif 960w, img/hero/hero-04-1440.avif 1440w, img/hero/hero-04-1920.avif 1920w"
+                        sizes="100vw"
                         alt="Fotografía de baile de KAIROS Visuals"
-                        loading="lazy"
                         decoding="async"
                         width="1920"
                         height="1080"
@@ -358,11 +375,17 @@
                     data-cat="foto"
                 >
 
-                    <div
-                        class="pic p1"
-                        role="img"
-                        aria-label="Fotografía de baile realizada por KAIROS Visuals"
-                    ></div>
+                    <img
+                        class="pic"
+                        src="img/portfolio/pic-1-900.avif"
+                        srcset="img/portfolio/pic-1-600.avif 600w, img/portfolio/pic-1-900.avif 900w, img/portfolio/pic-1-1200.avif 1200w"
+                        sizes="(max-width: 480px) 100vw, (min-width: 1500px) 750px, 50vw"
+                        alt="Fotografía de baile realizada por KAIROS Visuals"
+                        width="900"
+                        height="1200"
+                        loading="lazy"
+                        decoding="async"
+                    >
 
                     <div class="item-info">
 
@@ -391,7 +414,7 @@
                     src="https://player.vimeo.com/video/1236180877?autoplay=0&muted=1&loop=1&playsinline=1"
                     title="Reel de KAIROS VISUALS"
                     allow="autoplay; fullscreen; picture-in-picture"
-                    loading="eager"
+                    loading="lazy"
                     playsinline
                     allowfullscreen>
                 </iframe>
@@ -419,11 +442,17 @@
                     data-cat="foto"
                 >
 
-                    <div
-                        class="pic p3"
-                        role="img"
-                        aria-label="Fotografía deportiva realizada por KAIROS Visuals"
-                    ></div>
+                    <img
+                        class="pic"
+                        src="img/portfolio/pic-2-900.avif"
+                        srcset="img/portfolio/pic-2-600.avif 600w, img/portfolio/pic-2-900.avif 900w, img/portfolio/pic-2-1200.avif 1200w"
+                        sizes="(max-width: 480px) 100vw, (min-width: 1500px) 750px, 50vw"
+                        alt="Fotografía deportiva realizada por KAIROS Visuals"
+                        width="900"
+                        height="1065"
+                        loading="lazy"
+                        decoding="async"
+                    >
 
 
                     <div class="item-info">
@@ -447,11 +476,17 @@
                     data-cat="contenido"
                 >
 
-                    <div
-                        class="pic p4"
-                        role="img"
-                        aria-label="Fotografía de evento y contenido realizada por KAIROS Visuals"
-                    ></div>
+                    <img
+                        class="pic"
+                        src="img/portfolio/pic-3-900.avif"
+                        srcset="img/portfolio/pic-3-600.avif 600w, img/portfolio/pic-3-900.avif 900w, img/portfolio/pic-3-1200.avif 1200w"
+                        sizes="(max-width: 480px) 100vw, (min-width: 1500px) 750px, 50vw"
+                        alt="Fotografía de evento y contenido realizada por KAIROS Visuals"
+                        width="900"
+                        height="600"
+                        loading="lazy"
+                        decoding="async"
+                    >
 
 
                     <div class="item-info">
@@ -1005,7 +1040,7 @@
 
         <img
             class="footer-logo"
-            src="img/logo-white.png"
+            src="img/logo-white.webp"
             alt="KAIROS VISUALS logo"
             width="150"
             height="50"
